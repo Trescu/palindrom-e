@@ -1,70 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    height: 100vh;
-    display: flex;
+    background: linear-gradient(153deg, #00D4FF, #007BFF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: 4.5rem 1fr 4.5rem;
+    overflow-wrap: anywhere;
+    font-family: "Kodchasan";
+}
+
+header {
+    grid-area: header;
+    background-color: #bdfbff83;
+    border-bottom: 15px solid hsla(0, 0%, 0%, 0.13);
+}
+
+#border {
+    height: 100%;
+    border-bottom: rgba(0, 0, 0, 0.527);
+}
+
+main {
+    grid-area: main;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-.container {
+footer {
+    grid-area: footer;
+    background-color: hsla(0, 0%, 0%, 0.37);
+    border-top: 15px solid #00D4FF;
+    color: #BDFBFF;
+    font-weight: bold;
+}
+
+header,
+main,
+footer {
     display: flex;
     align-items: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem
 }
 
-button {
-    background: linear-gradient(45deg, #007bff, #00d4ff);
-    color: white;
-    font-size: 18px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-    margin-top: 20px;
+header {
+    justify-content: space-evenly;
+    padding: 1.5rem;
+    padding-top: 0.4rem;
 }
 
-button:hover {
-    transform: scale(1.1);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+#ph,
+#pf {
+    margin-right: auto;
 }
 
-button:active {
-    transform: scale(0.95);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-input {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    font-size: 16px;
-    border: 5px solid #007bff;
-    border-radius: 6px;
-    outline: none;
-    transition: all 0.3s ease-in-out;
-}
-
-input:focus {
-    border-color: #00d4ff;
-    box-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
-}
-
-#result, .result {
-    text-align: center;
-    font-size: 20px;
-    color: white;
-    margin-top: 20px;
-    display: block;
-    width: 100%;
-}
-
-.result {
-  margin-bottom: 15px;
-  font-size: 26px;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px #00d4ff
+img {
+    height: 8vh;
 }
