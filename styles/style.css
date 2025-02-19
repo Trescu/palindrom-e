@@ -1,3 +1,186 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
 body {
-    background-image: url(/imgs/Desktop\ main.png);
+  font-family: "Kodchasan", serif;
+  background: linear-gradient(-25deg, #007bff 40%, #00d4ff);
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100dvh;
+  min-height: 400px;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  gap: 3em;
+  min-width: 330px;
+  max-width: 1500px;
+  overflow-x: hidden;
+}
+
+main {
+  grid-area: main;
+  height: fit-content;
+  padding: 0;
+  transform: scale(1.2);
+}
+
+#form-main {
+  justify-self: center;
+  width: fit-content;
+  height: fit-content;
+  background-color: #004DA0;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 2em;
+  position: relative;
+
+}
+
+#form-main::after {
+  content: "";
+  background: linear-gradient(#00d4ff, #007bff);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 108%;
+  height: 112%;
+  border-radius: 2.3em;
+  z-index: -1;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.50);
+}
+
+header {
+  grid-area: header;
+  background-color: #64E9FF;
+  height: 3rem;
+  width: 100%;
+  border-bottom: 0.8em solid #0098E5;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+
+img {
+  height: 100%;
+  margin: 0.2em;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #004DA0;
+  height: 3rem;
+  width: 100%;
+  border-top: 0.8em solid cyan;
+  color: wheat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+}
+
+h1 {
+  color: #00AFFF;
+  font-weight: bold;
+  margin-bottom: -0.1em;
+  filter: blur(0.2px);
+  font-size: 24px;
+}
+
+#input-wrapper {
+  position: relative;
+  display: inline-block; /* Az input szélességéhez igazodik */
+  margin: 0.5em 0 0 0;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+#input-wrapper::after {
+  content: "";
+  background: linear-gradient(to right,#00d4ff, #007bff);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Mindig középre helyezi */
+  width: 103%; /* Az inputhoz képest nagyobb */
+  height: 135%; /* Magasabb háttér */
+  border-radius: 0.5em;
+  z-index: 1; /* Háttérként funkcionál */
+  box-shadow: 0 5px 5px rgba(0,0,0,0.50);
+}
+
+#form-input {
+  padding: 0.4em 0.8em;
+  border-radius: 0.5em;
+  border: none;
+  position: relative; /* Fontos, hogy a pszeudoelem mögé kerüljön */
+  background: white;
+  z-index: 2; /* Az input legyen előrébb, mint a háttér */
+  width: 86%;
+  background-color: #BDFBFF;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+    color: gray;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-style: italic;
+    opacity: 1; /* 0.5-tel halványabb lesz */
+    background-color: #BDFBFF;
+}
+
+button {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    color: #BDFBFF;
+    font-size: 18px;
+    padding: 0.5em 0.7em;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.50);
+    margin: 1.5em 0 0.5em 0;
+}
+
+button:hover, #input-wrapper:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#form-p {
+  color: #BDFBFF;
+  font-weight: bold;
+}
+
+#form-p-span {
+  color: #00D4FF;
+}
+
+p {
+  margin: 0 0.6em;
+  padding: 0;
 }
