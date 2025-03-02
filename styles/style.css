@@ -252,5 +252,6 @@ a:hover {
       transform: scale(0.8);
       align-self: center;
       justify-self: center;
+      margin-bottom: 3rem;
   }
 }
