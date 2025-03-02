@@ -1,3 +1,5 @@
+/* { outline: 1px solid red; } */
+
 html {
   padding: 0;
   margin: 0;
@@ -20,7 +22,6 @@ body {
   padding: 0;
   margin: 0;
   gap: 3em;
-  min-width: 330px;
   max-width: 1500px;
   overflow-x: hidden;
 }
@@ -198,12 +199,55 @@ p {
   font-weight: bold;
 }
 
+a, a:active {
+  all: unset;
+}
+
+a:hover {
+  color: whitesmoke;
+  transform: scale(2);
+}
+
 @media (max-width: 600px) {
-  footer {
-    font-size: 10px;
-  }
   header, footer {
     padding: 0;
   }
 
+}
+
+@media (max-width: 380px) {
+  body {
+      overflow-x: hidden;
+  }
+  main {
+      transform: scale(1);
+  }
+}
+
+@media (max-height: 390px) {
+  body {
+      overflow-y: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  main {
+      transform: scale(1);
+      align-self: center;
+      justify-self: center;
+  }
+}
+
+@media (max-height: 365px) {
+  body {
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+      transform: scale(0.8);
+      align-self: center;
+      justify-self: center;
+  }
 }
