@@ -98,7 +98,7 @@ footer {
 }
 
 header, footer {
-  padding: 0 2em;
+  padding: 0 0.3em;
   box-sizing: border-box;
 }
 
@@ -200,6 +200,6 @@ p {
 
 @media (max-width: 359px) {
   footer {
-    font-size: 1px;
+    font-size: 10px;
   }
 }
