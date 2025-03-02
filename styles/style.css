@@ -212,6 +212,9 @@ a:hover {
   header, footer {
     padding: 0;
   }
+  footer {
+    font-size: 20px;
+  }
 
 }
 
