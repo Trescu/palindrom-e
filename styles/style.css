@@ -198,7 +198,7 @@ p {
   font-weight: bold;
 }
 
-@media (max-width: 359px) {
+@media (max-width: 400px) {
   footer {
     font-size: 10px;
   }
